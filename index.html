@@ -24,21 +24,30 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="card p-4 shadow-sm">
-                    <h3>Registrar Incidencia</h3>
-                    <p>Complete el formulario para reportar un problema ciudadano.</p>
-                    <!-- Formulario conectado a Formspree para tu correo institucional -->
+                    <h3>Registrar Nueva Queja</h3>
+                    <p>Por favor, complete los siguientes datos para procesar su reporte:</p>
+                    
                     <form action="https://formspree.io/f/mrgzrzlk" method="POST">
                         <div class="mb-3">
-                            <label class="form-label">Tipo de problema</label>
-                            <select name="tipo_problema" class="form-select" required>
+                            <label class="form-label">Nombre Completo</label>
+                            <input type="text" name="nombre" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Dirección del Problema</label>
+                            <input type="text" name="direccion" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Tipo de incidencia</label>
+                            <select name="tipo" class="form-select" required>
                                 <option value="Bache">Bache en vía</option>
                                 <option value="Alumbrado">Alumbrado Público</option>
                                 <option value="Basura">Recolección de Basura</option>
+                                <option value="Otro">Otro</option>
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Descripción</label>
-                            <textarea name="descripcion" class="form-control" rows="3" required></textarea>
+                            <label class="form-label">¿Por qué reporta este problema?</label>
+                            <textarea name="motivo" class="form-control" rows="3" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Enviar Reporte</button>
                     </form>
@@ -46,11 +55,11 @@
             </div>
             <div class="col-md-4">
                 <div class="card p-4 shadow-sm">
-                    <h5>Estado del Proyecto</h5>
+                    <h5>Información Institucional</h5>
                     <ul>
-                        <li>Metodología: Scrum</li>
-                        <li>Estado: Prototipo Funcional</li>
-                        <li>Integrantes: Vera Diego, Lara Ayala</li>
+                        <li><strong>Metodología:</strong> Scrum</li>
+                        <li><strong>Estado:</strong> Prototipo Funcional</li>
+                        <li><strong>Integrantes:</strong> Vera Diego, Lara Ayala</li>
                     </ul>
                 </div>
             </div>
