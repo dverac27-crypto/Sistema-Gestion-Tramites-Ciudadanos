@@ -26,18 +26,19 @@
                 <div class="card p-4 shadow-sm">
                     <h3>Registrar Incidencia</h3>
                     <p>Complete el formulario para reportar un problema ciudadano.</p>
-                    <form>
+                    <!-- Formulario conectado a Formspree para enviar correos a dverac27@unemi.edu.ec -->
+                    <form action="https://formspree.io/f/mrgzrzlk" method="POST">
                         <div class="mb-3">
                             <label class="form-label">Tipo de problema</label>
-                            <select class="form-select">
-                                <option>Bache en vía</option>
-                                <option>Alumbrado Público</option>
-                                <option>Recolección de Basura</option>
+                            <select name="tipo_problema" class="form-select">
+                                <option value="Bache">Bache en vía</option>
+                                <option value="Alumbrado">Alumbrado Público</option>
+                                <option value="Basura">Recolección de Basura</option>
                             </select>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Descripción</label>
-                            <textarea class="form-control" rows="3"></textarea>
+                            <textarea name="descripcion" class="form-control" rows="3" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Enviar Reporte</button>
                     </form>
@@ -58,7 +59,7 @@
 
     <footer class="footer text-center">
         <p>Proyecto: Introducción a la Ingeniería de Software - UNEMI 2026</p>
-    </footer>
+    </footer> 
 
 </body>
 </html>
